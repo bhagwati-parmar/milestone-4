@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>editable Resume Builder</title>
+</head>
+<body>
+  <div class="resume-builder-container">
+    <!-- Form Section -->
+    <div class="form-section">
+      <h1>User Details</h1>
+      <form id="resume-form">
+        <!-- Personal Information -->
+        <h2>Personal Information</h2>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required />
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" placeholder="Enter your address" required />
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+
+        <label for="profile-pic">Upload Profile Picture:</label>
+        <input type="file" id="profile-pic" accept="image/*" />
+
+        <!-- About Section -->
+        <h2>About</h2>
+        <label for="about">About Yourself:</label>
+        <textarea id="about" rows="4" placeholder="Write about yourself..."></textarea>
+
+        <!-- Languages Section -->
+        <h2>Languages</h2>
+        <label for="languages">Languages (Add Points on New Line):</label>
+        <textarea id="languages" rows="2" placeholder="List the languages you know..."></textarea>
+
+        <!-- Resume Details -->
+        <label for="education">Education (Add Points on New Line):</label>
+        <textarea id="education" rows="1" placeholder="Add education details..." required></textarea>
+
+        <label for="experience">Experience (Add Points on New Line):</label>
+        <textarea id="experience" rows="2" placeholder="Add work experience..." required></textarea>
+
+        <label for="skills">Skills (Add Points on New Line):</label>
+        <textarea id="skills" rows="2" placeholder="List your skills..." required></textarea>
+
+        <label for="achievements">Achievements (Add Points on New Line):</label>
+        <textarea id="achievements" rows="1" placeholder="List your achievements..." required></textarea>
+
+        <button type="submit">Generate Resume</button>
+      </form>
+    </div>
+
+    <!-- Resume Preview Section -->
+    <div class="resume-container" id="resume-preview">
+      <div class="left-section">
+        <img id="profile-preview" class="profile-image" src="" alt="Profile Picture" />
+        <h1 id="name-preview">Your Name</h1>
+        <p id="about-preview">About yourself...</p>
+        <h3>Languages</h3>
+        <ul id="languages-preview"></ul>
+      </div>
+      <div class="right-section">
+        <h3>Personal Information</h3>
+        <p><strong>Address:</strong> <span id="address-preview"></span></p>
+        <p><strong>Phone:</strong> <span id="phone-preview"></span></p>
+        <p><strong>Email:</strong> <span id="email-preview"></span></p>
+
+        <h3>Education</h3>
+        <ul id="education-preview"></ul>
+
+        <h3>Experience</h3>
+        <ul id="experience-preview"></ul>
+
+        <h3>Skills</h3>
+        <ul id="skills-preview"></ul>
+
+        <h3>Achievements</h3>
+        <ul id="achievements-preview"></ul>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
